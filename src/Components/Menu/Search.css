@@ -1,0 +1,25 @@
+#search-input {
+  width: 220px;
+  height: 3rem;
+  padding: 0.5rem;
+  padding-left: 2.3rem;
+  margin-right: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--dark-bg-3);
+  outline: none;
+  background-color: var(--dark-bg-4);
+  color: var(--text-light-clr-1);
+  background-image: url(../../images/search.png);
+  background-repeat: no-repeat;
+  background-position: 5% 50%;
+  transition: all 0.3s;
+}
+
+#search-input::placeholder {
+  color: var(--text-light-clr-1);
+}
+
+#search-input:focus {
+  background-image: none;
+  padding-left: 1rem;
+}

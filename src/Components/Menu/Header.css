@@ -1,0 +1,38 @@
+#menu_header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem 0;
+  color: #fff;
+}
+
+#menu_header__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 576px) {
+  #menu_header__wrapper {
+    width: 100%;
+  }
+}
+
+#menu_header__title {
+  font-size: 1.75rem;
+  line-height: 140%;
+}
+
+#menu_header__date {
+  font-family: barlow-regular, sans-serif;
+  font-size: 1rem;
+  line-height: 140%;
+  color: var(--text-light-clr-2);
+}
+
+#menu_header__actions__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
