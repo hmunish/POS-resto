@@ -1,0 +1,142 @@
+#menu_item_accordian {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#menu_item_accordian__header {
+  width: 100%;
+  border-bottom: 1px solid var(--dark-bg-5);
+}
+
+#menu_item_accordian__tab__list {
+  padding-bottom: 1rem;
+  list-style: none;
+  display: flex;
+  gap: 5%;
+  position: relative;
+}
+
+#menu_item_accordian__tab__list > li {
+  /* background-color: aquamarine; */
+  font-size: 0.9rem;
+  line-height: 140%;
+  color: #fff;
+  cursor: pointer;
+}
+
+#menu_item_accordian__tab__list > li.active {
+  color: var(--clr-1);
+}
+
+#menu_item__active_tab_border {
+  position: absolute;
+  width: 1.9rem;
+  height: 3px;
+  bottom: 0;
+  background-color: var(--clr-1);
+  transition: all 0.3s;
+}
+
+#menu_item_accordian__item__list {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 15%;
+  color: #fff;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  /* background-color: thistle; */
+}
+
+#accordian__wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+#menu_item_accordian__items {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15% 3%;
+  list-style: none;
+  transition: all 0.3s;
+}
+
+.menu_item__card {
+  width: 192px;
+  height: 226px;
+  border-radius: 16px;
+  background-color: var(--dark-bg-2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.1ms;
+  text-align: center;
+}
+
+.menu_item__card:hover {
+  box-shadow:
+    0 4px 8px 0 var(--text-light-clr-1),
+    0 6px 20px 0 var(--text-light-clr-1);
+}
+
+.menu_item__card:active {
+  transform: scale(0.95);
+}
+
+.menu_item__card div {
+  width: 85%;
+  height: 69%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: -25%;
+  animation: menuImageRotate 11s linear infinite normal forwards;
+  animation-play-state: paused;
+}
+
+.menu_item__card:hover div {
+  animation-play-state: running;
+}
+
+.menu_item__name {
+  font-size: 0.9rem;
+  line-height: 130%;
+  font-family: barlow-medium, sans-serif;
+  width: 75%;
+}
+
+.menu_item__details {
+  font-family: barlow-regular, sans-serif;
+  font-size: 0.9rem;
+  line-height: 140%;
+}
+
+.menu_item__details.stock_qty {
+  color: var(--text-light-clr-1);
+}
+
+@media (max-width: 576px) {
+  #menu_item_accordian__items {
+    justify-content: space-around;
+  }
+}
+
+@keyframes menuImageRotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}

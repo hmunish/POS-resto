@@ -1,0 +1,101 @@
+/* Fonts starts here */
+
+@font-face {
+  font-family: barlow-semibold;
+  src: url(./Fonts/Barlow/Barlow-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: barlow-regular;
+  src: url(./Fonts/Barlow/Barlow-Regular.ttf);
+}
+
+@font-face {
+  font-family: barlow-medium;
+  src: url(./Fonts/Barlow/Barlow-Medium.ttf);
+}
+
+/* Fonts ends here */
+
+/* Scroll Bar styles starts here */
+
+::-webkit-scrollbar {
+  width: 3px;
+  background-color: var(--dark-bg-3);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--clr-1);
+}
+
+/* Scroll Bar styles ends here */
+
+/* Variables starts here */
+
+:root {
+  --clr-1: #ea7c69;
+  --clr-2: #ff7ca3;
+  --dark-bg-1: #252836;
+  --dark-bg-2: #1f1d2b;
+  --dark-bg-3: #393649;
+  --dark-bg-4: #2d303e;
+  --dark-bg-5: #393c49;
+  --text-light-clr-1: #abbbc2;
+  --text-light-clr-2: #e0e6e9;
+  --text-light-clr-3: #889898;
+}
+
+/* Variables ends here */
+
+/* Global styles starts here */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: barlow-semibold, sans-serif;
+}
+
+svg {
+  cursor: pointer;
+}
+
+/* Global styles ends here */
+
+/* Classes starts here */
+
+.flex {
+  display: flex;
+}
+
+.fd-col {
+  flex-direction: column;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Classes ends here */
+
+/* App starts here */
+
+main {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  background-color: var(--dark-bg-1);
+}
+
+/* App ends here */
+
+/* Modal starts here */
+
+#modal__wrapper {
+  position: absolute;
+}
+
+/* Modal ends here */

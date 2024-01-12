@@ -1,0 +1,21 @@
+#cart__button__box {
+  position: relative;
+}
+
+#cart__total__items {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: var(--clr-1);
+  top: -0.5rem;
+  right: -0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7rem;
+}
+
+.cart_btn {
+  font-size: 1.3rem;
+}
