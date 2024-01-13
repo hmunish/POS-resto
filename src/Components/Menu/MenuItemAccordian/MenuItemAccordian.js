@@ -20,7 +20,7 @@ const MenuItemAccordian = () => {
     );
     const ul = (
       <ul
-        id="menu_item_accordian__items"
+        className="menu_item_accordian__items"
         key={category[0]}
         ref={index === 0 ? firstAccordianTab : null}
       >
@@ -35,6 +35,7 @@ const MenuItemAccordian = () => {
             bgImg={item.img}
           />
         ))}
+        <div className="space" />
       </ul>
     );
     menuListMarkup.push(ul);
