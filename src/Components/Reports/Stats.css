@@ -1,0 +1,52 @@
+#stats {
+  width: 100%;
+  justify-content: space-evenly;
+  font-family: barlow-normal, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.stat {
+  width: 199px;
+  height: 143px;
+  padding: 1rem;
+  background-color: var(--dark-bg-2);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+  cursor: pointer;
+}
+
+.stat__icon__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5%;
+}
+
+.stat__icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background-color: var(--dark-bg-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat__percentage {
+  font-size: 0.8rem;
+  line-height: 140%;
+}
+
+.stat__amount {
+  color: #fff;
+  font-size: 1.75rem;
+}
+
+.stat__descp {
+  font-size: 0.9rem;
+  line-height: 130%;
+  color: var(--text-light-clr-1);
+}

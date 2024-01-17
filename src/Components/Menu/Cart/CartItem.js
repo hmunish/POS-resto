@@ -11,9 +11,14 @@ const CartItem = ({
   const cartCtx = useContext(CartContext);
 
   const handleQtyChange = (e) => {
-    menuCtx.addStock(category, id - 1, qty);
+    menuCtx.addStock(category, id, qty);
     cartCtx.update(category, id, e.target.value);
-    menuCtx.reduceStock(category, id - 1, e.target.value);
+    menuCtx.reduceStock(category, id, e.target.value);
+  };
+
+  const handleItemDelete = () => {
+    menuCtx.addStock(category, id, qty);
+    cartCtx.delete(category, id);
   };
 
   return (
@@ -34,6 +39,7 @@ const CartItem = ({
             type="number"
             className="cart__item__qty"
             value={qty}
+            min={1}
             onChange={handleQtyChange}
           />
           <p className="cart__item__total">{(qty * price).toFixed(2)}</p>
@@ -43,7 +49,11 @@ const CartItem = ({
             placeholder="Order Note..."
           />
           {/* eslint-disable-next-line */}
-          <button type="button" className="cart__item__delete">
+          <button
+            type="button"
+            className="cart__item__delete"
+            onClick={handleItemDelete}
+          >
             <FaTrash />
           </button>
         </div>

@@ -1,0 +1,34 @@
+#most__type__ordered {
+  width: 100%;
+  height: min(41%, 333px); /* stylelint-disable-line */
+  padding: 1.5rem 0;
+  background-color: var(--dark-bg-2);
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+}
+
+@media (max-width: 1000px) {
+  #most__type__ordered {
+    min-height: 333px;
+  }
+}
+
+.most__ordered__wrapper.type {
+  padding: 0 1.5rem 0.5rem 1.5rem;
+  border-bottom: 1px solid var(--dark-bg-1);
+}
+
+#most_ordered_pi_graph_wrapper {
+  width: 100%;
+  flex: 1;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#most_ordered_pi_graph_wrapper img {
+  height: 75%;
+  background-color: aqua;
+}

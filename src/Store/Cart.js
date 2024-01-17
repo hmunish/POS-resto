@@ -49,20 +49,51 @@ const cartReducer = (state, action) => {
     return updatedState;
   }
   if (action.type === "update") {
+    // Selecting item to be updated
     const item = state.items[action.category][action.id];
 
+    // State copy which is to be updated
     const updatedState = { ...state };
 
-    updatedState.totalAmount -= (item.price * item.qty).toFixed(2);
-
-    updatedState.items[action.category][action.id].qty = +action.newQty;
-
-    // Increasing total amount for cart
+    // Subtracting total amount for cart
     updatedState.totalAmount = +(
       updatedState.totalAmount
-      + item.price * item.qty
+      - item.price * item.qty
     ).toFixed(2);
 
+    // Updating cart item qty
+    updatedState.items[action.category][action.id].qty = +action.newQty;
+
+    // Adding new item total to cart total
+    updatedState.totalAmount = +(
+      updatedState.totalAmount
+      + item.price * action.newQty
+    ).toFixed(2);
+
+    // Returning updated state
+    return updatedState;
+  }
+
+  if (action.type === "delete") {
+    // Selecting item to be deleted
+    const item = state.items[action.category][action.id];
+
+    // State copy which is to be updated
+    const updatedState = { ...state };
+
+    // Subtracting item total from cart total
+    updatedState.totalAmount = +(
+      updatedState.totalAmount
+      - item.price * item.qty
+    ).toFixed(2);
+
+    // Deleting selected item
+    delete updatedState.items[action.category][action.id];
+
+    // Reducing cart total items count by 1
+    updatedState.totalItems -= 1;
+
+    // Returning update state
     return updatedState;
   }
 
@@ -96,6 +127,14 @@ const CartProvider = ({ children }) => {
     });
   };
 
+  const deleteItem = (category, id) => {
+    dispatchCartAction({
+      type: "delete",
+      category,
+      id,
+    });
+  };
+
   const cart = {
     isVisible: cartState.isVisible,
     items: cartState.items,
@@ -105,6 +144,7 @@ const CartProvider = ({ children }) => {
     hide: hideCart,
     add: addItem,
     update: updateItem,
+    delete: deleteItem,
   };
 
   return <CartContext.Provider value={cart}>{children}</CartContext.Provider>;
