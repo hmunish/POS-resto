@@ -1,0 +1,177 @@
+#payment {
+  width: 409px;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  background-color: var(--dark-bg-2);
+  padding: 1.5rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+  transform: scale(0.3);
+  animation: scaleUp 0.3s linear 1 normal forwards;
+}
+
+@media (max-width: 409px) {
+  #payment {
+    width: 100%;
+  }
+}
+
+#payment_header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+  line-height: 140%;
+}
+
+#payment_header h1 {
+  font-size: 1.75rem;
+}
+
+#payment_header p {
+  font-size: 1rem;
+  font-family: barlow-medium, sans-serif;
+  color: var(--text-light-clr-1);
+}
+
+#payment_details_wrapper {
+  width: 100%;
+  max-height: 75%;
+  flex-grow: 1;
+  border-top: 1px solid var(--dark-bg-5);
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3%;
+}
+
+.payment_fields_wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#payment_text_fields_wrapper {
+  padding: 1%;
+  flex-basis: 100%;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+}
+
+.payments_double_fields {
+  width: 100%;
+  display: flex;
+  gap: 3%;
+}
+
+#payment_methods_wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.payment_method_label {
+  flex-basis: 30%;
+  padding: 3% 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  border: 1px solid var(--dark-bg-5);
+  border-radius: 8px;
+  font-family: barlow-medium, sans-serif;
+  line-height: 130%;
+  color: var(--text-light-clr-1);
+  cursor: pointer;
+  position: relative;
+}
+
+.payment_method_label input {
+  visibility: hidden;
+  position: absolute;
+}
+
+.payment_method_label:has(input:checked) {
+  color: #fff;
+  border-color: var(--text-light-clr-1);
+  background-color: var(--dark-bg-1);
+}
+
+.payment_method_label:has(input:checked)::after {
+  content: "\2713";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  background-color: var(--clr-1);
+  right: 7%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 7px;
+  line-height: 15px;
+}
+
+.payment_inputs {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--dark-bg-5);
+  background: var(--dark-bg-4);
+  padding: 1rem;
+  color: var(--text-light-clr-2);
+}
+
+#payment__actions__wrapper {
+  width: 100%;
+  display: flex;
+  align-self: flex-end;
+  gap: 3%;
+}
+
+#cancel_payment,
+#confirm_payment {
+  flex-basis: 50%;
+  padding: 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  line-height: 140%;
+}
+
+#cancel_payment {
+  background: none;
+  color: var(--clr-1);
+  border: 1px solid var(--clr-1);
+}
+
+#cancel_payment:hover {
+  background: var(--clr-1);
+  color: #fff;
+}
+
+#confirm_payment {
+  background-color: var(--clr-1);
+  color: #fafafa;
+}
+
+#confirm_payment:hover {
+  transform: scale(0.95);
+}
+
+@keyframes scaleUp {
+  100% {
+    transform: scale(1);
+  }
+}
