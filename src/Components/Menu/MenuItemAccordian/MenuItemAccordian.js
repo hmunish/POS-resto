@@ -20,21 +20,22 @@ const MenuItemAccordian = () => {
     );
     const ul = (
       <ul
-        id="menu_item_accordian__items"
+        className="menu_item_accordian__items"
         key={category[0]}
         ref={index === 0 ? firstAccordianTab : null}
       >
-        {category[1].map((item, index) => (
+        {Object.values(category[1]).map((item) => (
           <MenuItemCard
             key={item.id}
             category={category[0]}
-            dataId={index}
+            dataId={item.id}
             name={item.name}
             price={item.price}
             stock={item.stock}
             bgImg={item.img}
           />
         ))}
+        <div className="space" />
       </ul>
     );
     menuListMarkup.push(ul);

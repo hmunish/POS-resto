@@ -1,19 +1,16 @@
-import { useContext } from "react";
+import { Route, Routes } from "react-router-dom";
 import Sidebar from "./Components/Sidebar/Sidebar";
-import Menu from "./Components/Menu/Menu";
-import Cart from "./Components/Menu/Cart/Cart";
-import { CartContext } from "./Store/Cart";
+import Home from "./Components/Home/Home";
+import ReportsContainer from "./Components/Reports/ReportsContainer";
 
-const App = () => {
-  const cart = useContext(CartContext);
-
-  return (
-    <main>
-      <Sidebar />
-      <Menu />
-      {cart.isVisible && <Cart />}
-    </main>
-  );
-};
+const App = () => (
+  <main>
+    <Sidebar />
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/reports" element={<ReportsContainer />} />
+    </Routes>
+  </main>
+);
 
 export default App;

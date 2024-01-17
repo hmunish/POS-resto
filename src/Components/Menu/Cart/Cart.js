@@ -1,10 +1,12 @@
-import { useContext, useMemo } from "react";
+import { useContext, useMemo, useState } from "react";
 import "./Cart.css";
 import { FaTimes } from "react-icons/fa";
 import { CartContext } from "../../../Store/Cart";
 import CartItem from "./CartItem";
+import Payment from "./Payment/Payment";
 
 const Cart = () => {
+  const [isPayment, setIsPayment] = useState(false);
   const cart = useContext(CartContext);
 
   const cartListMarkup = useMemo(() => {
@@ -24,6 +26,8 @@ const Cart = () => {
     )));
     return markup;
   }, [cart]);
+
+  if (isPayment) return <Payment backToCart={setIsPayment} />;
 
   return (
     <section id="cart">
@@ -51,7 +55,12 @@ const Cart = () => {
           $
           {cart.totalAmount}
         </p>
-        <button type="button" id="to_payment">
+        <button
+          type="button"
+          id="to_payment"
+          onClick={() => setIsPayment(true)}
+          disabled={!(cart.totalAmount > 0)}
+        >
           Continue to Payment
         </button>
       </div>

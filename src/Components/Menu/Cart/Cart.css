@@ -30,8 +30,6 @@
   width: 100%;
   flex-basis: 100%;
   overflow-y: scroll;
-
-  /* background-color: azure; */
 }
 
 #cart__list::-webkit-scrollbar {
@@ -87,5 +85,11 @@
 }
 
 #to_payment:hover {
-  box-shadow: 0 4px 8px 0 var(--text-light-clr-1);
+  box-shadow: 4px 4px 0 0 var(--text-light-clr-2);
+}
+
+#to_payment:disabled {
+  background: none;
+  border: 1px solid var(--clr-1);
+  box-shadow: none;
 }
