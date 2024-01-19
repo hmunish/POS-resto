@@ -55,6 +55,10 @@ ul.settings__nav > li span {
   color: var(--text-light-clr-1);
 }
 
+ul.settings__nav > li.active span {
+  color: #fff;
+}
+
 div.product__management {
   padding: 1.5rem;
   background-color: var(--dark-bg-2);
