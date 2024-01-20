@@ -1,4 +1,4 @@
-import { useContext, useRef } from "react";
+import { memo, useContext, useRef } from "react";
 import { MenuContext } from "../../Store/Menu";
 import ManageProductItemCard from "./ManageProductItemCard";
 
@@ -54,10 +54,6 @@ const ManageProduct = () => {
       e.target.parentElement
         .querySelector(".active")
         ?.classList.remove("active");
-      //   const tabWidth = `${
-      //     (e.target.offsetWidth / tabList.current.offsetWidth) * 100
-      //   }%`;
-      //   activeTabBorder.current.style.width = tabWidth;
       const marginLeft = (e.target.offsetLeft / tabList.current.offsetWidth) * 100;
       activeTabBorder.current.style.marginLeft = `${marginLeft}%`;
       e.target.classList.add("active");
@@ -93,4 +89,4 @@ const ManageProduct = () => {
   );
 };
 
-export default ManageProduct;
+export default memo(ManageProduct);

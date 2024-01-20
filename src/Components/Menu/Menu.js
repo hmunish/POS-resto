@@ -1,4 +1,5 @@
 import "./Menu.css";
+import { memo } from "react";
 import MenuTitle from "./Header";
 import MenuItemAccordian from "./MenuItemAccordian/MenuItemAccordian";
 
@@ -9,4 +10,4 @@ const Menu = () => (
   </section>
 );
 
-export default Menu;
+export default memo(Menu);

@@ -1,3 +1,4 @@
+import { memo } from "react";
 import Header from "./Header";
 import MostOrdered from "./MostOrdered";
 import MostTypeOrdered from "./MostTypeOrdered";
@@ -19,4 +20,4 @@ const ReportsContainer = () => (
   </section>
 );
 
-export default ReportsContainer;
+export default memo(ReportsContainer);

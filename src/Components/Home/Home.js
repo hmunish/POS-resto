@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { memo, useContext } from "react";
 import { CartContext } from "../../Store/Cart";
 import Menu from "../Menu/Menu";
 import Cart from "../Menu/Cart/Cart";
@@ -13,4 +13,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default memo(Home);

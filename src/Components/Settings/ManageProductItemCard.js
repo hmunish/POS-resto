@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { FaPen } from "react-icons/fa";
 
 const ManageProductItemCard = ({
@@ -30,4 +31,4 @@ const ManageProductItemCard = ({
   </div>
 );
 
-export default ManageProductItemCard;
+export default memo(ManageProductItemCard);
