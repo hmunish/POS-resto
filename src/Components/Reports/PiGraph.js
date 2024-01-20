@@ -1,3 +1,4 @@
+import { memo } from "react";
 import "./PiGraph.css";
 
 const PiGraph = () => (
@@ -13,4 +14,4 @@ const PiGraph = () => (
   </div>
 );
 
-export default PiGraph;
+export default memo(PiGraph);

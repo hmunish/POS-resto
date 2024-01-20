@@ -1,3 +1,4 @@
+import { memo } from "react";
 import "./MostTypeOrdered.css";
 import PiGraph from "./PiGraph";
 
@@ -17,4 +18,4 @@ const MostTypeOrdered = () => (
   </div>
 );
 
-export default MostTypeOrdered;
+export default memo(MostTypeOrdered);

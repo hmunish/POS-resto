@@ -1,3 +1,4 @@
+import { memo } from "react";
 import "./Search.css";
 
 const Search = () => (
@@ -9,4 +10,4 @@ const Search = () => (
   />
 );
 
-export default Search;
+export default memo(Search);

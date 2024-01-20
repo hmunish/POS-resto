@@ -71,45 +71,13 @@ const MenuItemAccordian = () => {
           role="tablist"
           ref={tabList}
         >
-          {/* <li>Hot Dishes</li>
-          <li>Cold Dishes</li>
-          <li>Soup</li>
-          <li>Grill</li>
-          <li>Appetizer</li>
-          <li>Dessert</li> */}
           {tabListMarkup}
           <div id="menu_item__active_tab_border" ref={activeTabBorder} />
         </ul>
       </div>
       <div id="menu_item_accordian__item__list">
         <h2>Choose Dishes</h2>
-        <div id="accordian__wrapper">
-          {/* <ul id="menu_item_accordian__items" ref={firstAccordianList}>
-            {menuCtx.items.map((item, index) => (
-              <MenuItemCard
-                key={item.id}
-                dataId={index}
-                name={item.name}
-                price={item.price}
-                stock={item.stock}
-                bgImg={item.img}
-              />
-            ))}
-          </ul>
-          <ul id="menu_item_accordian__items">
-            {menuCtx.items.map((item, index) => (
-              <MenuItemCard
-                key={item.id}
-                dataId={index}
-                name={item.name}
-                price={item.price}
-                stock={item.stock}
-                bgImg={item.img}
-              />
-            ))}
-          </ul> */}
-          {menuListMarkup}
-        </div>
+        <div id="accordian__wrapper">{menuListMarkup}</div>
       </div>
     </div>
   );

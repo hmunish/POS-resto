@@ -1,3 +1,4 @@
+import { memo } from "react";
 import ManageProduct from "./ManageProduct";
 import "./Settings.css";
 
@@ -61,4 +62,4 @@ const Settings = () => (
   </section>
 );
 
-export default Settings;
+export default memo(Settings);

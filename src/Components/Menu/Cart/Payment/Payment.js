@@ -5,6 +5,7 @@ import {
   FaPaypal,
 } from "react-icons/fa";
 import "./Payment.css";
+import { memo } from "react";
 
 const Payment = ({ backToCart }) => (
   <div id="payment">
@@ -135,4 +136,4 @@ const Payment = ({ backToCart }) => (
   </div>
 );
 
-export default Payment;
+export default memo(Payment);

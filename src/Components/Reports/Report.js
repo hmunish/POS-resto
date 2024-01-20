@@ -1,4 +1,5 @@
 import "./Report.css";
+import { memo } from "react";
 import img1 from "../../images/avatar_1.png";
 import img2 from "../../images/avatar_2.png";
 import img3 from "../../images/avatar_3.png";
@@ -98,4 +99,4 @@ const Report = () => (
   </div>
 );
 
-export default Report;
+export default memo(Report);

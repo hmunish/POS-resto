@@ -1,3 +1,4 @@
+import { memo } from "react";
 import img from "../../images/item-1.png";
 import "./MostOrdered.css";
 
@@ -46,4 +47,4 @@ const MostOrdered = () => (
   </div>
 );
 
-export default MostOrdered;
+export default memo(MostOrdered);

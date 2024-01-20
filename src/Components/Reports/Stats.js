@@ -1,3 +1,4 @@
+import { memo } from "react";
 import "./Stats.css";
 
 import {
@@ -52,4 +53,4 @@ const Stats = () => (
   </div>
 );
 
-export default Stats;
+export default memo(Stats);

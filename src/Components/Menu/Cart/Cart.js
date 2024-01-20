@@ -1,4 +1,6 @@
-import { useContext, useMemo, useState } from "react";
+import {
+  memo, useContext, useMemo, useState,
+} from "react";
 import "./Cart.css";
 import { FaTimes } from "react-icons/fa";
 import { CartContext } from "../../../Store/Cart";
@@ -68,4 +70,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default memo(Cart);
