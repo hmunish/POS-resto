@@ -152,80 +152,6 @@ const dummyMenuItems = {
   },
 };
 
-// // Dummy menu items should be replaced with real data
-// const dummyMenuItems = [
-//   {
-//     id: 1,
-//     name: "Spicy seasoned seafood noodles",
-//     price: 2.29,
-//     stock: 20,
-//     img: img1,
-//   },
-//   {
-//     id: 2,
-//     name: "Salted Pasta with mushroom sauce",
-//     price: 2.69,
-//     stock: 11,
-//     img: img2,
-//   },
-//   {
-//     id: 3,
-//     name: "Beef dumpling in hot and sour soup",
-//     price: 2.99,
-//     stock: 16,
-//     img: img3,
-//   },
-//   {
-//     id: 4,
-//     name: "Healthy noodle with spinach leaf",
-//     price: 3.29,
-//     stock: 22,
-//     img: img4,
-//   },
-//   {
-//     id: 5,
-//     name: "Hot spicy fried rice with omelet",
-//     price: 3.49,
-//     stock: 13,
-//     img: img5,
-//   },
-//   {
-//     id: 6,
-//     name: "Spicy seasoned seafood noodles",
-//     price: 2.29,
-//     stock: 20,
-//     img: img1,
-//   },
-//   {
-//     id: 7,
-//     name: "Salted Pasta with mushroom sauce",
-//     price: 2.69,
-//     stock: 11,
-//     img: img2,
-//   },
-//   {
-//     id: 8,
-//     name: "Beef dumpling in hot and sour soup",
-//     price: 2.99,
-//     stock: 16,
-//     img: img3,
-//   },
-//   {
-//     id: 9,
-//     name: "Healthy noodle with spinach leaf",
-//     price: 3.29,
-//     stock: 22,
-//     img: img4,
-//   },
-//   {
-//     id: 10,
-//     name: "Hot spicy fried rice with omelet",
-//     price: 3.49,
-//     stock: 13,
-//     img: img5,
-//   },
-// ];
-
 const MenuContext = createContext();
 
 const defaultMenuState = {
@@ -233,10 +159,6 @@ const defaultMenuState = {
 };
 
 const menuReducer = (state, action) => {
-  if (action.type === "add") {
-    return { ...state };
-  }
-
   if (action.type === "addStock") {
     const updatedState = { ...state };
 
