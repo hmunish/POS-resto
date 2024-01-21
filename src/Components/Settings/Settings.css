@@ -5,8 +5,7 @@ section.settings {
   display: flex;
   flex-direction: column;
   gap: 3%;
-
-  /* background-color: aquamarine; */
+  overflow-y: auto;
 }
 
 h1.settings {
@@ -21,8 +20,6 @@ h1.settings {
   display: grid;
   grid-template: auto / 17% 73%;
   gap: 5%;
-
-  /* background-color: beige; */
   overflow: hidden;
 }
 
@@ -102,6 +99,7 @@ select.product__management option {
 div.product_management.accordian {
   width: 100%;
   height: 75%;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -134,7 +132,7 @@ ul.product_management.accordian li {
   min-width: 100%;
   overflow-y: auto;
   display: flex;
-  gap: 5%;
+  gap: 2rem;
   flex-wrap: wrap;
   transition: all 0.3s;
 
@@ -207,12 +205,15 @@ button.add__item {
 
 @media (max-width: 1000px) {
   .settings.wrapper {
+    flex: initial;
     grid-template: auto / 100%;
-    overflow-y: auto;
+    overflow: visible;
+    gap: 1rem;
   }
 
   ul.settings__nav {
     overflow: visible;
+    padding-bottom: 1rem;
   }
 
   ul.settings__nav > li {
