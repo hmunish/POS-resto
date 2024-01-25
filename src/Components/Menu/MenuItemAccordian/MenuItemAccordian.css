@@ -94,6 +94,7 @@
 
 .menu_item__card:active {
   transform: scale(0.95);
+  outline: none;
 }
 
 .menu_item__card div {

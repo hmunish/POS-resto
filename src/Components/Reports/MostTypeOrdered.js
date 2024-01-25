@@ -1,6 +1,7 @@
 import { memo } from "react";
+import piGraphImg from "../../images/Circle.png";
 import "./MostTypeOrdered.css";
-import PiGraph from "./PiGraph";
+// import PiGraph from "./PiGraph";
 
 const MostTypeOrdered = () => (
   <div id="most__type__ordered">
@@ -13,7 +14,24 @@ const MostTypeOrdered = () => (
       </select>
     </div>
     <div id="most_ordered_pi_graph_wrapper">
-      <PiGraph />
+      <img src={piGraphImg} alt="PiGraph" />
+      <ul className="most__type__ordered__graph">
+        <li>
+          Dine In
+          <br />
+          <span>200 Customers</span>
+        </li>
+        <li>
+          To Go
+          <br />
+          <span>122 Customers</span>
+        </li>
+        <li>
+          Delivery
+          <br />
+          <span>264 Customers</span>
+        </li>
+      </ul>
     </div>
   </div>
 );
